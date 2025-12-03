@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Donaciones - Aguas con el agua</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section id="donaciones" class="card view">
+            
+            <h1>💝 Donaciones – Apoya campañas por el agua</h1>
+            <p class="lead">
+                Tu aporte, sin importar el monto, ayuda a instalar filtros, mantener pozos, financiar limpiezas, construir sistemas de captación pluvial y llevar educación sobre el agua a comunidades que más lo necesitan.
+            </p>
+            <p class="intro">
+                <strong>Impacto real:</strong> Cada peso donado se multiplica. Con $100 pesos proporcionas agua limpia a una familia por una semana. Con $1,000 pesos ayudas a reparar un sistema de filtración comunitario.
+            </p>
+
+            <!-- IMPACTO DE LAS DONACIONES -->
+            <div class="card cyan">
+                <h2>🎯 ¿A dónde va tu donación?</h2>
+                <p class="text-dark section-intro">
+                    Transparencia total. Cada peso se invierte directamente en proyectos verificables con impacto medible.
+                </p>
+                <div class="grid">
+                    <div class="chip light">
+                        <strong>💧 Filtros comunitarios</strong>
+                        <p class="muted-small">Instalamos sistemas de filtración en comunidades rurales. Un filtro sirve a 50 familias (250 personas) por 10 años. Costo: $15,000 pesos.</p>
+                    </div>
+                    <div class="chip light">
+                        <strong>🚰 Reparación de pozos</strong>
+                        <p class="muted-small">Rehabilitamos pozos abandonados y reparamos bombas. Un pozo restaurado beneficia a 100 familias. Costo promedio: $25,000 pesos.</p>
+                    </div>
+                    <div class="chip light">
+                        <strong>📚 Programas educativos</strong>
+                        <p class="muted-small">Talleres en escuelas sobre el ciclo del agua, ahorro y contaminación. Llegamos a 5,000 estudiantes al año. Costo por taller: $3,000 pesos.</p>
+                    </div>
+                    <div class="chip light">
+                        <strong>🌧️ Captación pluvial</strong>
+                        <p class="muted-small">Instalamos sistemas para captar agua de lluvia en techos. Una familia puede recolectar 80,000 litros anuales. Costo: $8,000 pesos.</p>
+                    </div>
+                    <div class="chip light">
+                        <strong>🧪 Análisis de calidad</strong>
+                        <p class="muted-small">Pruebas de laboratorio para detectar contaminantes. Documentamos descargas ilegales y apoyamos denuncias. Costo por análisis: $500 pesos.</p>
+                    </div>
+                    <div class="chip light">
+                        <strong>🌳 Reforestación de cuencas</strong>
+                        <p class="muted-small">Plantamos árboles nativos en zonas de recarga hídrica. Cada árbol filtra 380L diarios. Meta: 50,000 árboles al año. Costo por árbol: $30 pesos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <!-- FORMULARIO DE DONACIÓN -->
+                <div class="card">
+                    <h3>💳 Haz una donación</h3>
+                    <p class="muted-small">
+                        Selecciona el monto y destino de tu aporte. Cada contribución cuenta.
+                    </p>
+
+                    <form id="donationForm" class="donation-form" onsubmit="return false;">
+                        
+                        <label><p>Nombre completo</p></label>
+                        <input type="text" id="donorName" placeholder="Tu nombre" required>
+
+                        <label><p>Correo electrónico</p></label>
+                        <input type="email" id="donorEmail" placeholder="email@ejemplo.com">
+
+                        <label><p>Monto (MXN)</p></label>
+                        <input type="number" id="donAmount" min="10" value="100">
+                        
+                        <div class="quick-amounts">
+                            <button type="button" class="amount-btn" data-amount="50">$50</button>
+                            <button type="button" class="amount-btn" data-amount="100">$100</button>
+                            <button type="button" class="amount-btn" data-amount="250">$250</button>
+                            <button type="button" class="amount-btn" data-amount="500">$500</button>
+                            <button type="button" class="amount-btn" data-amount="1000">$1,000</button>
+                        </div>
+
+                        <label><p>Destina tu donación a</p></label>
+                        <select id="campaignSelect">
+                            <option value="filtros">💧 Filtros comunitarios</option>
+                            <option value="pozos">🚰 Reparación de pozos</option>
+                            <option value="educacion">📚 Programas educativos</option>
+                            <option value="captacion">🌧️ Captación pluvial</option>
+                            <option value="analisis">🧪 Análisis de calidad</option>
+                            <option value="reforestacion">🌳 Reforestación</option>
+                            <option value="donde-mas-se-necesite">🎯 Donde más se necesite</option>
+                        </select>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="monthlyDonation">
+                            <span>Hacer donación mensual recurrente</span>
+                        </label>
+
+                        <div class="donate-row">
+                            <button class="btn" id="donateBtn">💝 Donar ahora</button>
+                            <button class="btn secondary" type="button" id="clearBtn">🔄 Limpiar</button>
+                        </div>
+
+                        <p class="muted-small">
+                            ⚠️ <strong>Nota:</strong> Esta es una demostración educativa. No procesa pagos reales. En un sitio real, aquí habría integración con pasarelas de pago como Stripe, PayPal o Conekta.
+                        </p>
+                    </form>
+                </div>
+
+            <!-- POR QUÉ DONAR -->
+            <div class="card">
+                <h2>❓ ¿Por qué donar?</h2>
+                <div class="grid">
+                    <div class="chip">
+                        <strong>🎯 Impacto directo</strong>
+                        <p class="muted-small">Cada peso va directamente a proyectos en comunidades. Sin intermediarios. Sin burocracia. Solo ayuda real.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>📈 Transparencia total</strong>
+                        <p class="muted-small">Publicamos reportes trimestrales con fotos, videos y testimonios de beneficiarios. Auditorías externas anuales.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>🔄 Sustentabilidad</strong>
+                        <p class="muted-small">No damos peces, enseñamos a pescar. Capacitamos a comunidades para mantener sus propios sistemas.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>🤝 Alianzas verificadas</strong>
+                        <p class="muted-small">Trabajamos con ONGs establecidas, universidades y gobiernos locales. Proyectos avalados técnicamente.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>💪 Empoderamiento local</strong>
+                        <p class="muted-small">Contratamos mano de obra local. Generamos empleo digno. Fortalecemos economías comunitarias.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>🌍 Impacto ambiental</strong>
+                        <p class="muted-small">Cada proyecto protege ecosistemas, reduce contaminación y promueve uso responsable del agua.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMAS ALTERNATIVAS DE AYUDAR -->
+            <div class="card">
+                <h2>🤲 Otras formas de ayudar</h2>
+                <p class="section-intro">
+                    No solo el dinero ayuda. Hay muchas formas de contribuir a la causa del agua.
+                </p>
+                <div class="grid">
+                    <div class="chip">
+                        <strong>👥 Voluntariado</strong>
+                        <p class="muted-small">Únete a jornadas de limpieza de ríos, instalación de filtros o talleres educativos. 4 horas al mes hacen diferencia.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>📢 Difusión</strong>
+                        <p class="muted-small">Comparte información sobre la crisis del agua. Cada persona que toma conciencia multiplica el impacto.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>🎓 Capacitación</strong>
+                        <p class="muted-small">¿Eres plomero, ingeniero, maestro? Tu expertise es valiosa. Capacita a comunidades en tu área.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>🏢 Donación corporativa</strong>
+                        <p class="muted-small">¿Tienes una empresa? Adopta una comunidad o patrocina un proyecto. RSE con impacto real.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>📝 Advocacy</strong>
+                        <p class="muted-small">Presiona a autoridades. Firma peticiones. Exige rendición de cuentas. El cambio sistémico es crucial.</p>
+                    </div>
+                    <div class="chip">
+                        <strong>🎨 Creatividad</strong>
+                        <p class="muted-small">Artistas, diseñadores, comunicadores: ayúdanos a crear contenido que eduque y movilice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LLAMADO FINAL -->
+            <div class="card dark-blue">
+                <h2>🌟 Juntos podemos cambiar la historia del agua en México</h2>
+                <p>
+                    La crisis del agua no se resolverá sola. Requiere acción colectiva, compromiso y recursos. Tu donación, por pequeña que sea, salva vidas, restaura ecosistemas y construye un futuro donde todos tengan acceso a agua limpia.
+                </p>
+                <p>
+                    <strong>El agua es un derecho humano. Hagámoslo realidad para todos.</strong>
+                </p>
+                <div class="final-cta">
+                    <button class="btn white large" onclick="document.getElementById('donationForm').scrollIntoView({behavior: 'smooth'})">
+                        💝 Hacer una donación ahora
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
